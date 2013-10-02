@@ -1,14 +1,17 @@
-<nav =id='primary-navigation'>
+<nav id='primary-navigation'>
   <ul>
     <li>
       <%= link_to "Home", root_path, class: "home-link" %>
-    </li><br>
+    </li>
     <li>
       <%= link_to "My_Blog", posts_path %>
-    </li><br>
+    </li>
     <li>
       <%= link_to "New_Blog_Post", new_post_path %>
-    </li><br>
+    </li>
+    <li>
+      <%= link_to "New_Author", authors_path %>
+    </li>
   </ul>
   <br>
 </nav>
