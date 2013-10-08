@@ -12,6 +12,12 @@
     <li>
       <%= link_to "All_Authors", authors_path %>
     </li>
+  
+      <% if Rails.env.production? %>
+        <li>
+          You're in production.
+        </li>
+      <% end %>
   </ul>
   <br>
 </nav>
