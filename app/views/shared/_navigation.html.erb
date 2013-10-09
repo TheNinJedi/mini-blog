@@ -10,12 +10,22 @@
       <%= link_to "All_Authors", authors_path %>
     </li>
 
-    <div class='pull-right'>
+    <%# to get it to actually pull right look at bens application.css file on github. %>
+    <div class='pull-right'> 
       <li>
         <% if current_author %>
-          Logged in as <%= current_author.username %>
+          <li>
+            Logged in as <%= link_to current_author.username, author_path(current_author) %>
+            |
+            <%= link_to "Sign Out", signout_path, method: :delete %>
+          </li>
         <% else %>
-          <%= link_to 'Sign_Up', new_author_path %>
+          <li>
+            <%= link_to 'Sign_Up', signup_path %>
+          </li>
+          <li>
+            <%= link_to 'Sign_In', signin_path %>
+          </li>
         <% end %>
       </li>
     </div>
