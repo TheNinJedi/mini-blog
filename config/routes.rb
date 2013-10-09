@@ -1,11 +1,8 @@
 MiniBlog::Application.routes.draw do
-  resources :comments
+  get "sessions/new"
 
-
-  resources :authors
-
-
-  resources :posts
+  resources :posts, :comments, :authors, :sessions   
+  
 
 
   root to: 'home#index'
